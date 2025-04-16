@@ -1,0 +1,114 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.code-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.code-content {
+  font-family: 'Fira Code', monospace;
+  color: #00ff00;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  padding: 2rem;
+  margin: 0;
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.hero-content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.ring-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.ring-image {
+  max-width: 80%;
+  height: auto;
+  animation: glow 3s infinite alternate;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  color: white;
+  font-size: 6rem;
+  font-weight: 800;
+  text-align: center;
+  position: absolute;
+  z-index: 3;
+  white-space: nowrap;
+  -webkit-text-stroke: 2px rgba(255,255,255,0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  letter-spacing: 2px;
+  text-shadow: 
+    0 0 10px rgb(0, 0, 0),
+    0 0 20px rgba(10, 10, 10, 0.4);
+}
+
+@keyframes glow {
+  from {
+    filter: brightness(0.8) drop-shadow(0 0 20px rgba(255,255,255,0.3));
+  }
+  to {
+    filter: brightness(1.2) drop-shadow(0 0 40px rgba(255,255,255,0.6));
+  }
+}
+
+/* Optional: Add scrolling animation to the code */
+@keyframes scrollCode {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+/* Make sure the code is readable on smaller screens */
+@media (max-width: 768px) {
+  .code-content {
+    font-size: 0.6rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+} 

@@ -1,0 +1,71 @@
+.mockup-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.mockup-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mockup-title {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 
+    0 0 10px rgb(0, 0, 0),
+    0 0 20px rgba(10, 10, 10, 0.4);
+}
+
+.mockup-subtitle {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0.8;
+}
+
+.mockup-image-container {
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .mockup-title {
+    font-size: 2.5rem;
+  }
+
+  .mockup-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mockup-title {
+    font-size: 2rem;
+  }
+
+  .mockup-subtitle {
+    font-size: 1rem;
+  }
+}
